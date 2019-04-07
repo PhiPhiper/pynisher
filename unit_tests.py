@@ -42,7 +42,7 @@ def spawn_rogue_subprocess(num_procs = 5):
 def simulate_work(size_in_mb, wall_time_in_s, num_processes):
 	# allocate memory (size_in_mb) with an array
 	# note the actual size in memory of this process is a little bit larger
-	A = [42.]*((1024*size_in_mb)//8);
+	A = [42.]*((1024*size_in_mb)//8)
 
 	# try to spawn new processes
 	if (num_processes > 0):
@@ -51,7 +51,7 @@ def simulate_work(size_in_mb, wall_time_in_s, num_processes):
 
 	# sleep for specified duration
 	time.sleep(wall_time_in_s+1)
-	return(size_in_mb, wall_time_in_s, num_processes);
+	return(size_in_mb, wall_time_in_s, num_processes)
 
 def svm_example(n_samples = 10000, n_features = 100):
 	from sklearn.svm import SVR
@@ -101,6 +101,7 @@ def nested_pynisher(level=2, cputime=5, walltime=5, memlimit = 10e24, increment 
 
 class test_limit_resources_module(unittest.TestCase):
 
+	
 	@unittest.skipIf(not all_tests, "skipping successful tests")
 	def test_success(self):
 
@@ -287,6 +288,6 @@ class test_limit_resources_module(unittest.TestCase):
 
 
 
-unittest.main()
+exit(unittest.main())
 
 
